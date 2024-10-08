@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", system-ui;
+  }
+header .logo img{
+    height: 40px;
+    
+}
+header .logo{
+    display: flex;
+    align-items: center;
+
+}
+header .logo li{
+    list-style: none;
+    margin-left: 60px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 20;
+}
+header .logo ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    
+}
+header{
+    position: relative;
+    width: 1300px;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50px;
+    pointer-events: auto;
+    margin-top: 10px;
+
+
+}
+header input{
+    background-color: transparent;
+    border: #fff 1px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    z-index: 1;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'poppins', sans-serif;
+}
+header nav ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+header nav ul li a {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10; /* Higher z-index for visibility */
+    position: relative; /* Required for z-index to take effect */
+}
+
+nav li{
+    list-style: none;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255); /* Just for visibility */
+    font-size: 20px;
+    z-index: 500;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    margin-top: -50px;
+}
+.banner .content{
+    text-align: start;
+    margin-left: 5rem;
+}
+.banner .content .title{
+    font-size: 6rem;
+    color: #fff;
+}
+
+nav .fa-magnifying-glass{
+    color: #fff;
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.banner .content .des{
+    text-align: start;
+    width: 30rem;
+    margin-left: 0.4rem;
+    color: rgb(192, 192, 192);
+    font-family: 'Chillax', sans-serif;
+}
+.banner .content .watchbtn{
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 19px;
+    font-weight: 100;
+    margin-top: 1rem;
+    margin-left: 0.4rem;
+    background-color: rgb(29, 29, 29);
+    border: rgb(29, 29, 29) 1px solid;
+    color: #fff;
+    border-radius: 5px;
+}
+.banner .content .watchbtn:hover{
+    background-color: rgb(0, 0, 0);
+    border: rgb(0, 0, 0) 1px solid;
+    transition: all ease 0.3s;
+}
+.banner .content .watchbtn .fa-tv{
+    margin-left: 8px;
+    font-size: 17px;
+}
+.banner .content .savebtn{
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 19px;
+    font-weight: 100;
+    margin-top: 1rem;
+    margin-left: 0.4rem;
+    color: rgb(29, 29, 29);
+    background-color: rgb(207, 207, 207);
+    border: #dadada 1px solid;
+    border-radius: 5px;
+    margin-left: 2rem;
+}
+.banner .content .savebtn:hover{
+    background-color: rgb(255, 255, 255);
+    border: #ffffff 1px solid;
+    transition: all ease 0.3s;
+}
+.banner .content .savebtn .fa-bookmark{
+    margin-left: 8px;
+    font-size: 17px;
+}
+.banner .bgVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+::-webkit-scrollbar {
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #961b1b;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+
+}
+
+.container h1{
+    margin-left: 5rem;
+    font-family: 'Chillax', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.container .anime-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin: 0 5rem;
+}
+.cards {
+    flex: 0 1 calc(20% - 10px); /* 5 cards per row with some space */
+    height: 400px;
+    overflow: hidden; /* Hide overflow if the image is larger */
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: #111111be;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+.cards:hover{
+    transform: scale(1.02); 
+    background-color: #ccccccbe;
+    transition: all ease 0.6s;
+}
+.cards:hover h1, 
+.cards:hover p,
+.cards:hover .fa-bookmark{
+    color: black; /* Change text color to black on hover */
+    transition: color ease 0.6s; /* Smooth transition for text color */
+}
+.cards h1{
+    bottom: 10px;
+    left: 10px;
+    color: #ffffff;
+    z-index: 10;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px; 
+    margin: 0;
+    font-weight: 560;
+}
+
+.cards p{
+    position: absolute;
+    left: 5px;
+    color: #8f8f8f;font-size: 15px;
+    
+}
+.cards .fa-bookmark{
+    position: absolute;
+    left: 90%;
+}
+.cards .fa-bookmark:hover{
+    color: #e2df19;
+    transition: all ease 0.3s;
+}
+.cards img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover; 
+    border-radius: 8px 0  0;
+}
+
+.fa-bookmark.active {
+    color: yellow;
+}
+.footer{
+    width: 100%;
+    height: 50vh;
+    background-color: #242424;
+}
+footer {
+    background-color: #111; /* Dark background */
+    color: #d1d1d1; /* Light text color */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px; /* Center the content */
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.footer-content ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.footer-content ul li {
+    display: inline; /* Display items inline */
+    margin: 0 15px; /* Space between items */
+}
+
+.footer-content ul li a {
+    color: #d1d1d1; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.icons{
+    font-size: 25px;
+    margin-top: 10px;
+}
+.icons i {
+    margin: 0 10px; /* Space between icons (left and right) */
+    font-size: 24px; /* Adjust size if needed */
+    color: #d1d1d1; /* Icon color */
+    transition: color 0.3s; /* Smooth color change */
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Basic font */
+}
+
+header {
+    position: relative; /* Make header relative for absolute positioning of dropdown */
+}
+
+.genre-popup {
+    display: none; /* Hide by default */
+    position: absolute;
+    background-color: rgb(34, 34, 34);
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px; /* Space below the link */
+    z-index: 1000; /* Ensure it's above other content */
+    width: 104.5%; /* Set a width for the dropdown */
+    left: -30px;
+}
+
+.genre-popup ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.genre-popup li {
+    padding: 10px; /* Space within each item */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.genre-popup li:hover {
+    background-color: #000000; /* Highlight on hover */
+}
+
+/* Show the dropdown when hovering over the parent */
+header ul li:hover .genre-popup {
+    display: block; /* Show the dropdown */
+}
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start;
+        visibility: hidden;
+    }
+
+    header .logo img {
+        height: 30px; /* Reduce logo size */
+    }
+    header .logo ul li a{
+        color: #000000;
+        font-size: 15px;
+        visibility: hidden;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation items */
+        margin-top: 10px; /* Add spacing above */
+    }
+
+    header nav ul li a {
+        margin: 5px 0; /* Reduce margin between items */
+        font-size: 16px; /* Smaller font size */
+        color: #000000;
+    }
+
+    header nav ul input {
+        border-color: #000000;
+        font-size: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 10px; /* Add space above */
+    }
+    .header nav ul{
+        flex-direction: column;
+        flex-direction: column; /* Stack navigation items */
+        margin-top: 10px; 
+    }
+    header nav ul li input {
+        border-color: #000000;
+        font-size: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px; /* Space between input and sign-in */
+        flex: 1; /* Allow input to grow */
+    }
+    header nav ul li {
+        display: flex; /* Use flex for inline display */
+        align-items: center; /* Center items vertically */
+        margin-bottom: 10px;  /* Center items vertically */
+    }
+    header nav ul li .sign-in {
+        color: #000000;
+        font-size: 16px;
+        align-self: center; /* Center vertically */
+    }
+
+    .banner{
+        height: 100%;
+        top: -100px;
+    }
+    .banner .content {
+        text-align: left;
+        padding: 15px; /* Add padding */
+        margin-left: 0 !important;
+    }
+    body{
+        background-color: #000000;
+    }
+    .banner .content .title {
+        font-size: 2.5rem; /* Smaller title */
+    }
+    .banner .content .des {
+        font-size: 12px; /* Smaller description */
+        visibility: hidden;
+    }
+    .banner .content .watchbtn{
+        font-size: 13px;
+    }
+    .banner .content .savebtn{
+        font-size: 13px;
+        padding-top: 5px;
+        padding-bottom: 4px;
+    }
+    .banner .content .watchbtn .fa-tv{
+        font-size: 10px;
+    }
+    .banner .content .savebtn .fa-bookmark{
+        font-size: 10px;
+    }
+    .banner .bgVideo{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: brightness(0.5);
+    }
+    .container {
+        margin-bottom: 5rem; /* Remove any margin */
+        padding: 0; /* Remove any padding */
+        width: 100%; /* Ensure full width */
+        background-color: #000000;
+    }
+
+    .anime-cards {
+        margin-left: 10px !important; /* Ensure no margin */
+        margin-right: 10px !important;
+
+
+    }
+
+    .cards {
+        flex: 0 1 calc(50% - 10px); /* 2 cards per row */
+        margin-bottom: 10px; /* Set margin to 0 for individual cards */
+        height: 220px;
+    }
+    .cards h1{
+        font-size: 15px;
+    }
+    .cards p{
+        font-size: 12px;
+    }
+    .cards img{
+        height: 150px;
+    }
+    .footer{
+        position: fixed;
+        padding: 0;
+
+    }
+}

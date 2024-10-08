@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Website</title>
+    <link rel="icon" href="Platinum.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/50575b88b4.js" crossorigin="anonymous"></script>  
+    <link href="https://api.fontshare.com/v2/css?f[]=chillax@300,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="Platinum.png" alt="">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" id="genre-link">Genre</a>
+                        <div class="genre-popup" id="genre-popup">
+                            <ul>
+                                <li>Action</li>
+                                <li>Adventure</li>
+                                <li>Comedy</li>
+                                <li>Drama</li>
+                                <li>Fantasy</li>
+                                <li>Horror</li>
+                                <li>Romance</li>
+                                <li>Science Fiction</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="signin">Collection</a></li>
+                </ul>    
+        </div>
+        <nav>
+            <ul>              
+                <input type="text">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <li><a href="#" >Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <video autoplay muted loop
+        class="bgVideo">
+            <source src="Kishibe vs Denji and Power - Chainsaw Man Episode 10 [Full Fight 1080p].mp4"
+            type="video/mp4">
+        </video>
+
+        <div class="content">
+            <div class="title">
+                Chainsaw Man
+            </div>
+            <div class="des">
+                Chainsaw Man follows the story of Denji, an impoverished teenager who makes a contract that fuses his body with that of a dog-like Devil named Pochita, granting him the ability to transform parts of his body into chainsaws. Denji eventually joins the Public Safety Devil Hunters, a government agency focused on fighting against Devils whenever they become a threat to Japan
+            </div>
+            <a href="https://9animetv.to/watch/chainsaw-man-17406?ep=94597" class="watchbtn">Watch Now<i class="fa-solid fa-tv"></i></a>
+            <button class="savebtn" onclick="toggleBookmark(this)">Save<i class="fa-solid fa-bookmark"></i></button>
+        </div>
+    </div>
+
+    <section class="container">
+        <h1>Special for You</h1>
+        <div class="anime-cards">
+            <div class="cards">
+                <a href="https://9animetv.to/watch/jujutsu-kaisen-tv-534?ep=10789">
+                    <img src="Jujutsu_kaisen.jpg" alt="">
+                    <h1>Jujutsu Kaisen</h1>
+                    <p>24 min | TV Series</p>
+                </a><i class="fa-solid fa-bookmark" onclick="toggleBookmark(this)"></i>
+            </div>        
+            
+            <div class="cards">
+                <a href="https://9animetv.to/watch/one-piece-100?ep=2142">
+                    <img src="images (1).jpg" alt="">
+                    <h1>0ne Piece</h1>
+                    <p>24 min | TV Series</p>
+                </a>
+                    <i class="fa-solid fa-bookmark" onclick="toggleBookmark(this)"></i>
+            </div>        
+            <div class="cards">
+                <a href="https://9animetv.to/watch/hunter-x-hunter-2?ep=65">
+                    <img src="hunter.jpg" alt="">
+                    <h1>Hunter x Hunter</h1>
+                    <p>24 min | TV Series</p>
+                 </a>
+                 <i class="fa-solid fa-bookmark" onclick="toggleBookmark(this)"></i>
+            </div>       
+            <div class="cards">
+                <a href="https://9animetv.to/search?keyword=monster">
+                    <img src="monster.jpg" alt="">
+                    <h1>Monster</h1>
+                    <p>24 min | TV Series</p>
+                </a>
+                <i class="fa-solid fa-bookmark" onclick="toggleBookmark(this)"></i>
+            </div>           
+            <div class="cards">
+                <a href="https://9animetv.to/watch/spy-x-family-code-white-19291?ep=126907">
+                    <img src="spy x family.jpg" alt="">
+                    <h1>Spy x Family</h1>
+                    <p>24 min | TV Series</p>
+                </a>
+                <i class="fa-solid fa-bookmark" onclick="toggleBookmark(this)"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Anime Website. All rights reserved. uhm</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+    </footer>
+     
+
+
+    <script>
+        function toggleBookmark(element) {
+            const icon = element.querySelector('.fa-bookmark') || element;
+            icon.classList.toggle('active');
+        }
+
+        document.getElementById('genre-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        const popup = document.getElementById('genre-popup');
+        popup.style.display = popup.style.display === 'none' || popup.style.display === '' ? 'block' : 'none';
+    });
+
+    // Close the popup if clicking outside
+    window.addEventListener('click', function(event) {
+        const popup = document.getElementById('genre-popup');
+        if (!event.target.matches('#genre-link') && !popup.contains(event.target)) {
+            popup.style.display = 'none';
+        }
+    });
+    </script>
+    
+    
+    
+</body>
+</html>
